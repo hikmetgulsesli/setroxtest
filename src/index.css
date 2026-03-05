@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  /* Typography */
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  /* Game Theme Colors */
+  --color-snake-head: #22c55e;
+  --color-snake-body: #16a34a;
+  --color-snake-glow: rgba(34, 197, 94, 0.5);
+  --color-food: #ef4444;
+  --color-food-glow: rgba(239, 68, 68, 0.5);
+  --color-board-dark: #0f172a;
+  --color-board-cell: #1e293b;
+  --color-board-cell-alt: #334155;
+  --color-surface: #1e293b;
+  --color-surface-elevated: #334155;
+
+  /* UI Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Accent */
+  --accent-green: #22c55e;
+  --accent-green-hover: #16a34a;
+
+  /* Base */
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-board-dark);
+  color: #f8fafc;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Utility classes for game */
+.game-board {
+  background-color: var(--color-board-dark);
+  border-radius: var(--space-md);
+  padding: var(--space-md);
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.1);
+}
+
+.snake-cell {
+  background-color: var(--color-snake-body);
+  border-radius: 4px;
+}
+
+.snake-head {
+  background-color: var(--color-snake-head);
+  box-shadow: 0 0 12px var(--color-snake-glow);
+  border-radius: 4px;
+}
+
+.food-cell {
+  background-color: var(--color-food);
+  box-shadow: 0 0 12px var(--color-food-glow);
+  border-radius: 50%;
+}
+
+.board-cell {
+  background-color: var(--color-board-cell);
+}
+
+.board-cell-alt {
+  background-color: var(--color-board-cell-alt);
+}
